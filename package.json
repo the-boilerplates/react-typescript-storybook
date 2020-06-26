@@ -1,0 +1,44 @@
+{
+  "name": "react-typescript-storybook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/es5/index.js",
+  "module": "dist/es6/index.js",
+  "types": "dist/es6/index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "build": "npm run build:es6 && npm run build:es5",
+    "build:es6": "tsc --outDir dist/es6 --module esnext",
+    "build:es5": "tsc --outDir dist/es5 --module commonjs ",
+    "docs": "start-storybook -p 9001 -c .storybook",
+    "docs:build": "build-storybook -c .storybook -o .out",
+    "postinstall": "install-types",
+    "prebuild": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/the-boilerplates/react-typescript-storybook.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/the-boilerplates/react-typescript-storybook/issues"
+  },
+  "homepage": "https://github.com/the-boilerplates/react-typescript-storybook#readme",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@storybook/addon-viewport": "^5.3.19",
+    "@storybook/react": "^5.3.19",
+    "@types/node": "^14.0.14",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.1.0",
+    "install-types": "^2.0.1",
+    "react-docgen-typescript-loader": "^3.7.2",
+    "typescript": "^3.9.5"
+  }
+}
