@@ -1,4 +1,4 @@
-# React TypeScript Storybook0 Boilerplate
+# React TypeScript Storybook Boilerplate
 
 Start your next react component library/package just by cloning the repo
 
